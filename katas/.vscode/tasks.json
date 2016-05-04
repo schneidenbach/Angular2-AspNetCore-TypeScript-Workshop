@@ -1,0 +1,17 @@
+{
+	"version": "0.1.0",
+	"command": "gulp",
+	"isShellCommand": true,
+	"tasks": [
+		{
+			"taskName": "angular2",
+			// Make this the default build command.
+			"isBuildCommand": true,
+			// Show the output window only if unrecognized errors occur.
+			"showOutput": "always",
+			// Use the standard less compilation problem matcher.
+			"problemMatcher": "$lessCompile",
+            "isWatching": true
+		}
+	]
+}

@@ -1,0 +1,28 @@
+
+<html>
+<head>
+    <title>Angular 2 Course!</title>
+
+    <script src="../scripts/system.src.js"></script>
+    <script src="../scripts/Rx.js"></script>
+
+    <script>
+        System.config({
+            packages: {
+                'app': {
+                    format: 'register',
+                    defaultExtension: 'js'
+                }
+            }
+        });
+        System.import('app')
+              .then(null, console.error.bind(console));
+    </script>
+
+</head>
+
+<body>
+    <h1>Angular 2 Katas</h1>
+</body>
+
+</html>

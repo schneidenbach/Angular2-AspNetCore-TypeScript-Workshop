@@ -1,0 +1,31 @@
+
+<html>
+<head>
+    <title>Angular 2 Course!</title>
+
+    <script src="scripts/angular2-polyfills.js"></script>
+    <script src="scripts/system.src.js"></script>
+    <script src="scripts/Rx.js"></script>
+    <script src="scripts/angular2.dev.js"></script>
+    <script src="scripts/http.dev.js"></script>
+
+    <script>
+        System.config({
+            packages: {
+                '../Angular': {
+                    format: 'register',
+                    defaultExtension: 'js'
+                }
+            }
+        });
+        System.import('../Angular/app/boot')
+              .then(null, console.error.bind(console));
+    </script>
+
+</head>
+
+<body>
+    <h1>Angular 2 Katas</h1>
+</body>
+
+</html>
