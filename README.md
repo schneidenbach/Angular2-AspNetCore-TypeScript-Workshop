@@ -13,17 +13,13 @@ We'll be covering a wide variety of subjects in a very short amount of time (onl
 Subject | Time | Links
 ------- | ---- | -----
 TypeScript basics | 30 minutes | TBD
-Plunker demo | 15 minutes | http://plnkr.co
 Angular 2 - Hello World | 45 minutes | TBD
 Angular 2 - Components and templating | 60 minutes | TBD
 Angular 2 - Built-in directives and pipes | 45 minutes | TBD
 Angular 2 - Nested components | 45 minutes | TBD
-Angular 2 - Routing | 45 minutes | TBD
-Angular 2 - Services | 45 minutes | TBD
-ASP.NET Core | 75 minutes | TBD
-Angular 2 - RxJS, Observables, and HTTP | 45 minutes | TBD
-Questions/reserve time | 30 minutes | None
-**Total time** | 8 hours 
+Angular 2 - Services | 30 minutes | TBD
+ASP.NET Core | 45 minutes | TBD
+Angular 2 - RxJS, Observables, and HTTP | 60 minutes | TBD
 
 ## License
 
