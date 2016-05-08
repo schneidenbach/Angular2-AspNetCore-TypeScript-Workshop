@@ -2,7 +2,7 @@
 
 Hey everyone – this is Spencer Schneidenbach, your speaker du jour at the upcoming Angular 2 and ASP.NET Core workshop!  I’m so glad you are attending and am very much looking forward to meeting you all face to face!
 
-About the only thing that this workshop requires is a **working knowledge of HTML, CSS, and JavaScript**.  For JavaScript, you should understand functions and objects and how they relate, the “this” keyword, prototypal inheritance, and scoping.
+About the only thing that this workshop requires is a **working knowledge of HTML, CSS, and JavaScript**.  For JavaScript, you should understand functions and objects and how they relate, the “this” keyword, prototypal inheritance, and scoping.  Promises and the DOM model would be nice as well, but aren't required.
 
 For the ASP.NET Core part, we'll be going over a lot of the basics, but it would help to know some C#.
 

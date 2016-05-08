@@ -2,8 +2,6 @@
 
 This is the schedule and outline for the course.  There is a break approximately every 60-75 minutes.
 
-There is 30 minutes at the end of each 4 hour block that is reserved for time in case we aren't able to 
-
 ### Typescript basics - 8:00 AM to 8:30 AM (30 minutes)
 1. TypeScript vs JavaScript
 2. Classes
@@ -21,7 +19,6 @@ There is 30 minutes at the end of each 4 hour block that is reserved for time in
   - Selector
   - Templates
   - One-way data binding
-  - Intro to ngModel
 4. Bootstrapping
 
 ### Break - 9:15 AM to 9:30 AM (15 minutes)
@@ -36,9 +33,6 @@ There is 30 minutes at the end of each 4 hour block that is reserved for time in
   - Class binding
   - Style binding
   - Event binding
-3. Lifecycle Hooks
-  - NgInit
-  - NgDestroy
 
 ### Break - 10:30 AM to 10:45 AM
 
@@ -82,16 +76,17 @@ There is 30 minutes at the end of each 4 hour block that is reserved for time in
   - Startup
   - Models
   - Controllers
-  - Views
 
 ### Break - 3:15 PM to 3:30 PM (15 minutes)
 
 ### RxJS and Observables - 3:30 PM to 4:30 PM (60 minutes)
-1. Promises vs Observables
-2. Map
-3. Catch
+1. Observables
+	- Promises vs observables
+	- Map
+	- Catch
 4. Async pipe
-5. Http
+5. Angular 2's HTTP service
 6. Controller setup
+7. Lifecycle hooks (OnInit and OnDestroy)
 
 ### Questions/reserve time 4:30 PM to 5:00 PM (30 minutes)
