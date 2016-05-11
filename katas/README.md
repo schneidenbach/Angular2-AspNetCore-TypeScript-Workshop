@@ -74,7 +74,10 @@ A junior programmer in your division started on an Angular 2 app to display expe
 
 **Instructions:**
 
-Your boss is so impressed with your skills with the expense app, he's asked you to make it even cooler.  Being the awesome programmer that you are, you've decided to take matters into your own hands and start separating concerns on the page.  
+Your boss is so impressed with your skills with the expense app, he's asked you to make it even cooler.  Being the awesome programmer that you are, you've decided to take matters into your own hands and start separating concerns on the page.
+
+* Separate the expense rows into a separate component.  (Yes, it's okay if the template has standalone <tr> tags in them with no parents!)
+* 
 
 ### Kata 5 - Services
 **Objectives:**
@@ -82,14 +85,11 @@ Your boss is so impressed with your skills with the expense app, he's asked you 
 * Learn how to leverage services to read and write data inside of your Angular 2 application.
 * Use dependency injection to add your service to your component.
 
+**Instructions**
 
-### Kata 6 - ASP.NET Core
-**Objectives:**
+You continue to impress by separating all of the concerns.  Your next task is to separate your expense data into a separate data store.  
 
-* Use models to represent and store your data.
-* Use controllers to send and receive data using HTTP.
-
-### Kata 7 - RxJS, Observables and HTTP
+### Kata 6 - RxJS, Observables and HTTP
 
 **Objectives:**
 
@@ -98,4 +98,4 @@ Your boss is so impressed with your skills with the expense app, he's asked you 
 * Create a RESTful API using ASP.NET Core.
 * Use the Angular 2 HTTP Service to communicate with an HTTP API.
 * Use the async pipe to display data.
-* Use component lifecycle hooks to trigger events when components are created and destroyed. 
+* Use component lifecycle hooks to trigger events when components are created and destroyed.
