@@ -2,9 +2,15 @@
 
 Hey everyone – this is Spencer Schneidenbach, your speaker du jour at the upcoming Angular 2 and ASP.NET Core workshop!  I’m so glad you are attending and am very much looking forward to meeting you all face to face!
 
+I wanted to take a few minutes and go over a few things before the workshop next Wednesday.  This email is all about preparation and requirements.
+
+**First things first: please take [this short survey](https://docs.google.com/forms/d/18_o70vUD1Trz2OkCDS4TxpJXCu9onJWW4IyN2QkMyzY/viewform) so that I can make sure to cover as much relevant stuff as possible!**  Anyone who enters and provides their name/email can win a complimentary OzCode license ([OzCode](http://oz-code.com/) is an extension for Visual Studio that enhances your C# debugging experience.)
+
+### Prerequisites
+
 About the only thing that this workshop requires is a **working knowledge of HTML, CSS, and JavaScript**.  For JavaScript, you should understand functions and objects and how they relate, the “this” keyword, prototypal inheritance, and scoping.  Promises and the DOM model would be nice as well, but aren't required.
 
-For the ASP.NET Core part, we'll be going over a lot of the basics, but it would help to know some C#.
+For the ASP.NET Core part, we'll be going over a lot of the basics, but you should know something about C#.
 
 **Note that links to all important things are available by going to the workshop page at [angular2.schneids.net](http://angular2.schneids.net).**
 
@@ -14,7 +20,7 @@ If you want to follow along with the Angular 2 examples on your computer, please
 
 - Install [Visual Studio Code](http://code.visualstudio.com/).  This is a free, lightweight text editor provided by Microsoft.
 - Install [Node](http://nodejs.org/) - the Recommended For Most Users version.
-- Download the code for this repo here - you can either click Download ZIP or clone the repo using Git.  **Note that this repo WILL be updated constantly, so we will be downloading it again at the start of the workshop.**
+- Download the code from the Github repo [here](https://github.com/schneidenbach/Angular2-AspNetCore-TypeScript-Workshop) - you can either click Download ZIP or clone the repo using Git.  **Note that this repo WILL be updated constantly, so we will be downloading it again at the start of the workshop.**
 - Watch [this video](https://www.youtube.com/watch?v=N2BcmpzH5cc) to walk through getting everything setup.
 
 Note that following along and doing the code examples is totally optional, but you will get the most out of this workshop by doing so.

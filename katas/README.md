@@ -56,11 +56,12 @@ HINT: Event handlers (such as click) reference functions within the component.  
 
 A junior programmer in your division started on an Angular 2 app to display expense data.  However, he didn't format the data inside the grid properly (we all know managers love proper formats), which means that you get to use your newfound knowledge of Angular 2 pipes to format it for them!
 
+* Modify the Amount Reimbursable 
 * Display all dollar amounts using the currency pipe.
 * Display all percent amounts using the percent pipe.
 * For negative dollar amounts, color the dollar amount text red. 
-* Apply the "danger" class to the expense row if the expense is unapproved.  (An expense is considered approved if the approvedBy property is truthy.)
-* Display the Approved By property in uppercase.
+* Apply the "danger" class to the expense row if the expense is unapproved.  (An expense is considered approved if the ApprovedBy property is truthy.)
+* Display the Approved By first and last name, in uppercase.  (Replace that ugly JSON display!)
 * Format the Expense Date like this: MM-dd-yyyy
 
 ### Kata 4 - Nested components
@@ -76,8 +77,10 @@ A junior programmer in your division started on an Angular 2 app to display expe
 
 Your boss is so impressed with your skills with the expense app, he's asked you to make it even cooler.  Being the awesome programmer that you are, you've decided to take matters into your own hands and start separating concerns on the page.
 
-* Separate the expense rows into a separate component.  (Yes, it's okay if the template has standalone <tr> tags in them with no parents!)
+* Separate the individual expense row into a separate component.
 * 
+
+HINT: your separate expense row component will probably have a 
 
 ### Kata 5 - Services
 **Objectives:**

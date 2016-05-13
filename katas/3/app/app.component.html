@@ -1,0 +1,41 @@
+<h3>
+    Expenses
+</h3>
+<table class="table">
+    <tr>
+        <th>Expense Date</th>
+        <th>Description</th>
+        <th>Approved By</th>
+        <th>Amount</th>
+        <th>Amount Reimbursable</th>
+        <th>Reimbursement %</th>
+    </tr>
+    <tr *ngFor="let expense of expenses">
+        <td>
+            {{ expense.ExpenseDate }}
+        </td>
+        <td>
+            {{ expense.Description }}
+        </td>
+        <td>
+            {{ expense.ApprovedBy | json }}
+        </td>
+        <td>
+            {{ expense.Amount }}
+        </td>
+        <td>
+            <input type="number" class="form-control" [value]="expense.AmountReimbursable">
+        </td>
+        <td>
+            TODO: add this
+        </td>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>{{ getTotal() }}</th>
+        <th>{{ getReimbursableTotal() }}</th>
+        <th>{{ getTotalReimbursablePercent() }}</th>
+    </tr>
+</table>

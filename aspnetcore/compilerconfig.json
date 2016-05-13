@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "gulp.es5.js",
+    "inputFile": "gulp.js"
+  },
+  {
+    "outputFile": "gulpfile.es5.js",
+    "inputFile": "gulpfile.js"
+  }
+]
