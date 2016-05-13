@@ -7,7 +7,7 @@ import {Course} from './course';
     template:`
     <div>
         <h3>Course List</h3>
-        <div *ngFor="#course of courses">
+        <div *ngFor="let course of courses">
             {{course.Name}}
         </div>
     </div>

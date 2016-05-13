@@ -3,9 +3,10 @@
   "name": "ASP.NET",
   "private": true,
   "scripts": {
-    "start": "tsc && concurrently \"tsc -w\" \"dnx web\" ",
+    "start": "concurrently \"tsc\" \"npm run copyfiles\" && concurrently \"tsc -w\" \"dnx web\" ",
     "postinstall": "typings install",
-    "typings": "typings"
+    "typings": "typings",
+    "copyfiles": "copyfiles node_modules/**/* wwwroot"
   },
   "dependencies": {
     "@angular/core":  "2.0.0-rc.1",
@@ -25,6 +26,7 @@
     "typescript": "^1.8.10",
     "typings": "^0.8.1",
     "livereload": "^0.4.1",
-    "gulp-shell": "^0.5.2"
+    "gulp-shell": "^0.5.2",
+    "copyfiles": "0.2.1"
   }
 }
