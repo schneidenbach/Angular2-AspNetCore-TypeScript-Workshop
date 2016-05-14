@@ -26,7 +26,7 @@ If you want to be able to follow along on your laptop as we use ASP.NET Core dur
 3. The Core CLR binaries will now be installed.
 
 ### Run the project
-1. Download [this repo](https://github.com/schneidenbach/Angular2AndAspNetCoreSample) as a ZIP file and unzip it to a directory of your choosing. (If you're a Git user, feel free to clone it instead.)
+1. Download [this repo](https://github.com/schneidenbach/Angular2-AspNetCore-TypeScript-Workshop) as a ZIP file and unzip it to a directory of your choosing. (If you're a Git user, feel free to clone it instead.)
 2. Open Visual Studio Code.
 3. Go to File -> Open Folder.
 4. Navigate to the folder where your source code was downloaded and open the "aspnetcore" folder.
