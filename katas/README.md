@@ -20,16 +20,17 @@ Good question!
 * Use interpolation (`{{ }}` expressions) to display data in your component.
 * Start your Angular 2 application.
 
+This one will be a follow-along kata!  No specific instructions per se.
+
 ### Kata 2 - Components and templating
 
 **Objectives:**
 
 * Learn about the advantages of Web Components and how they relate to Angular 2 components.
-* Use either the template or templateUrl properties on a component to store your component HTML.
-* Use the ngFor directive to display lists of data.
-* Hide and show elements conditionally using the ngIf directive.
-* Wire events to HTML elements inside of your components.
-* Bind to attributes and properties on HTML elements inside of your components, including `class` and `style`.
+* Use either the `template` or `templateUrl` properties on a component to store your component HTML.
+* Use the `\*ngFor` directive to display lists of data.
+* Hide and show elements conditionally using the `\*ngIf` directive.
+* Wire events to elements inside of your components.
 
 **Instructions:**
 You've been asked to update a small SPA that displays workshop data for an upcoming conference.
@@ -37,62 +38,39 @@ You've been asked to update a small SPA that displays workshop data for an upcom
 * Move the component HTML from the component definition into a separate HTML file and point the component to that HTML file.
 * Display the array of workshops (the workshops property of your component) in your view.  The workshop name, start time, speaker and course number should be displayed.
 * Add a button in each row that, when clicked, displays an element with the list of students from that course.
-* Highlight the course's row a different color when that course is selected.
 
 **Hints:**
 
-
-[\*ngFor directive](hints/1/ngfor.md "ngFor is case sensitive and the syntax is exactly like ES6/TypeScripts for loop: let obj of list.  Note the "of", not "in" like in C#!") 
-
-
-<details>
-	<summary>
-	HINT: Component template/templateUrl
-	</summary>
-	Components can be stored in HTML files and referenced using the templateHtml property in the Component decorator.
-</details>
-<details>
-	\*ngFor directive
-<summary>
-	\*
-</summary>
-</details>
-
-HINT: Event handlers (such as click) can reference functions within the component OR run a tiny script.  Remember, event handlers use the () syntax to bind events to functions.  All of these are valid uses:
-
-* This binds the click event to the `doSomething()` function within the component
-```html
-<button (click)="doSomething()" />
-```
-* This button sets the `employee` property in the component to the `emp` property from within the *ngFor loop
-```html
-<div *ngFor="let emp in employees">
-	<button (click)="employee = emp;" />
-</div>	<!-- end of ngFor -->
-``` 
-
-HINT: 
+[Component templates](hints/template.md "Component HTML can be stored in the `template` property of the @Component() declaration OR added to a separate file and referenced on the component using the templateUrl property.")
+[\*ngFor directive](hints/ngfor.md "*ngFor is case sensitive and the syntax is exactly like ES6/TypeScripts for loop: *ngFor="let obj of list".  Note the "of", not "in" like in C#! Click for an example.") 
+[Event handlers](hints/events.md 'Events are bound to an element using the () syntax: (click)="doSomething()" Click for more info!')
+[\*ngIf directive](hints/ngif.md "*ngIf evaluates an expression and if the expression is truthy, the element is rendered: *ngIf="firstName".  Click for more info!")
 
 ### Kata 3 - Built-in directives and pipes
 
 **Objectives:**
 
-* Use the ngClass directive to change what classes are attached to an element.
 * Learn about two-way binding with ngModel.
-* Use ngStyle to style HTML elements within components.
 * Use pipes to format dates, strings, and numbers.
+* Use `ngStyle`, `ngClass`, the `style` property, and the `class` property to style your elements.
 
 **Instructions:**
 
-A junior programmer in your division started on an Angular 2 app to display expense data.  However, he didn't format the data inside the grid properly (we all know managers love proper formats), which means that you get to use your newfound knowledge of Angular 2 pipes to format it for them!
+A junior programmer in your division started on an Angular 2 app to display expense data.  However, he didn't format the data inside the grid properly (we all know managers love properly formatted data), which means that you get to use your newfound knowledge of Angular 2 pipes to format the data!
 
 * Modify the Amount Reimbursable 
-* Display all dollar amounts using the currency pipe.
+* Display all dollar amounts in USD using the currency pipe.
 * Display all percent amounts using the percent pipe.
-* For negative dollar amounts, color the dollar amount text red. 
-* Apply the "danger" class to the expense row if the expense is unapproved.  (An expense is considered approved if the ApprovedBy property is truthy.)
+* For negative dollar amounts, color the dollar amount text red. (HINT: ternary expressions can be used to determine truthyness!)
+* Apply the "warning" class to the expense row if the expense is unapproved.  (An expense is considered approved if the ApprovedBy property is truthy.)
 * Display the Approved By first and last name, in uppercase.  (Replace that ugly JSON display!)
 * Format the Expense Date like this: MM-dd-yyyy
+
+**HINTS:**
+
+[Pipes basics](hints/pipes.md "Pipes alter the display of interpolated expressions.  Click for more info!")
+[Styles and CSS classes](hints/styles.md "Too much goodness to put into a tooltip.  Click for more info!")
+[Two-way binding with ngModel](hints/ngmodel.md "ngModel expressions bind an input to a component property.  Remember to use the box of bananas syntax: [(ngModel)]="firstName" Click for an example!")
 
 ### Kata 4 - Nested components
 

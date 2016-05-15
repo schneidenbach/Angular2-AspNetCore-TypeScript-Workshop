@@ -1,10 +1,17 @@
 import {Component} from '@angular/core';
-import {Expense, Employee} from './expense';
+import {Expense} from './expense';
+import {Employee} from './employee';
 
 @Component({
     selector: 'expense-app',
     templateUrl: './app/app.component.html',
-    
+    styles: [
+        `
+        .negative-amount {
+            //TODO: style this maybe?
+        }
+        `
+    ]
 })
 export class AppComponent {
     expenses: Array<Expense> = [
