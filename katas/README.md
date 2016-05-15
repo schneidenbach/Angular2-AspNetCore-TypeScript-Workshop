@@ -69,7 +69,9 @@ A junior programmer in your division started on an Angular 2 app to display expe
 **HINTS:**
 
 [Pipes basics](hints/pipes.md "Pipes alter the display of interpolated expressions.  Click for more info!")
+
 [Styles and CSS classes](hints/styles.md "Too much goodness to put into a tooltip.  Click for more info!")
+
 [Two-way binding with ngModel](hints/ngmodel.md "ngModel expressions bind an input to a component property.  Remember to use the box of bananas syntax: [(ngModel)]="firstName" Click for an example!")
 
 ### Kata 4 - Nested components
