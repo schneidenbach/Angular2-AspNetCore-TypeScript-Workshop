@@ -32,16 +32,46 @@ Good question!
 * Bind to attributes and properties on HTML elements inside of your components, including `class` and `style`.
 
 **Instructions:**
-You've been asked to make a small SPA that displays course data for an upcoming conference.
+You've been asked to update a small SPA that displays workshop data for an upcoming conference.
 
 * Move the component HTML from the component definition into a separate HTML file and point the component to that HTML file.
-* Display the array of courses (the courses property of your component) in your view.  The course name, start date, author and course number should be displayed.
-* Add a button in each row that, when clicked, displays an element with a list of students from that course.
-* Highlight the course's row a different color when that course is selected. 
+* Display the array of workshops (the workshops property of your component) in your view.  The workshop name, start time, speaker and course number should be displayed.
+* Add a button in each row that, when clicked, displays an element with the list of students from that course.
+* Highlight the course's row a different color when that course is selected.
 
-HINT: Components can be stored in HTML files and referenced using the templateHtml property in the Component decorator.
-HINT: \*ngFor is case sensitive and the syntax is exactly like ES6/TypeScripts: var *obj* of *list*
-HINT: Event handlers (such as click) reference functions within the component.  Also, you must use 
+**Hints:**
+
+
+[\*ngFor directive](hints/1/ngfor.md "ngFor is case sensitive and the syntax is exactly like ES6/TypeScripts for loop: let obj of list.  Note the "of", not "in" like in C#!") 
+
+
+<details>
+	<summary>
+	HINT: Component template/templateUrl
+	</summary>
+	Components can be stored in HTML files and referenced using the templateHtml property in the Component decorator.
+</details>
+<details>
+	\*ngFor directive
+<summary>
+	\*
+</summary>
+</details>
+
+HINT: Event handlers (such as click) can reference functions within the component OR run a tiny script.  Remember, event handlers use the () syntax to bind events to functions.  All of these are valid uses:
+
+* This binds the click event to the `doSomething()` function within the component
+```html
+<button (click)="doSomething()" />
+```
+* This button sets the `employee` property in the component to the `emp` property from within the *ngFor loop
+```html
+<div *ngFor="let emp in employees">
+	<button (click)="employee = emp;" />
+</div>	<!-- end of ngFor -->
+``` 
+
+HINT: 
 
 ### Kata 3 - Built-in directives and pipes
 
