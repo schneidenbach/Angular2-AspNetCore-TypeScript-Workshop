@@ -55,3 +55,4 @@ nuget.exe
 node_modules
 **/[Cc]ompiler/[Rr]esources/**/*.js
 *launchSettings.json
+npm-debug.log

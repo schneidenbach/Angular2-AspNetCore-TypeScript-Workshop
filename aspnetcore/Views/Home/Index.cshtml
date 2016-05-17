@@ -17,12 +17,14 @@
         System.import('app')
               .then(null, console.error.bind(console));
     </script>
-
+    
 </head>
 
 <body>
     <h1>Angular 2 and ASP.NET Core Demo</h1>
     <my-app></my-app>
+    <hr>
+    <a asp-action="About" asp-controller="Home">About page</a>
 </body>
 
 </html>
