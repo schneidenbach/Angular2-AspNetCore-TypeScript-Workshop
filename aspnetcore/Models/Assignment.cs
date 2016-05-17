@@ -1,4 +1,4 @@
-namespace StudentManager.Models {
+namespace Angular2.Models {
     public class Assignment {
         public int Id { get; set; }
         public string Name { get; set; }
