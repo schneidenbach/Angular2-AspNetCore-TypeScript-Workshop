@@ -37,8 +37,8 @@ This one will be a follow-along kata!  No specific instructions per se.
 You've been asked to update a small SPA that displays workshop data for an upcoming conference.
 
 * Move the component HTML from the component definition into a separate HTML file and point the component to that HTML file.
-* Display the array of workshops (the workshops property of your component) in your view.  The workshop name, start time, speaker and course number should be displayed.
-* Add a button in each row that, when clicked, displays an element with the list of students from that course.
+* Display the array of workshops (the workshops property of your component) in your view.  The workshop name, start time, speaker and workshop number should be displayed.
+* Add a button in each row that, when clicked, displays an element with the list of students from that workshop.
 
 **Hints:**
 
@@ -60,9 +60,9 @@ A junior programmer in your division started on an Angular 2 app to display expe
 
 * Display all dollar amounts in USD using the currency pipe.
 * Display all percent amounts using the percent pipe.
-* For negative dollar amounts, color the dollar amount text red. (HINT: ternary expressions can be used to determine truthyness!)
+* For negative dollar amounts, color the Amount text red. (HINT: ternary expressions can be used to determine truthyness!)
 * Apply the "warning" class to the expense row if the expense is unapproved.  (An expense is considered approved if the ApprovedBy property is truthy.)
-* Display the Approved By first and last name, in uppercase.  (Replace that ugly JSON display!)
+* Display the Approved By first and last name, in uppercase.  (Replace that ugly JSON display!)  HINT: some ApprovedBy properties are undefined, so you will have to use a special operator inside of your expression to display them... 
 * Format the Expense Date like this: MM-dd-yyyy
 * At the top of the expense app, add a text box that binds (in a two-way fashion!) to the userName on your component.
 
@@ -93,16 +93,23 @@ Your boss is so impressed with your skills with the expense app, he's asked you 
 	* A button that allows you to approve the selected expense.  Clicking the button will fire the expenseApproved event and transmit the Expense property that you inputted.
 * Have the parent component subscribe to the expenseApproved event - when the transmitted expense is approved, set its ApprovedBy property to the `name` property. 
 
-**Take it a step farther**
+**Take it a step further:**
 
 * Make the Expense Amount in the child component an input textbox.  THE CATCH?  No two-way binding, which means no ngModel!
-* Instead, have two buttons - Save and Cancel.  Save will transmit an expenseAmountChanged event that can be subscribed to.  Cancel resets the textbox to the original expense amount.
+* Instead, have two buttons - Save and Cancel.  Save will transmit an expenseAmountChanged event that the parent will subscribe to and use to change the amount.  Cancel resets the textbox to the original expense amount.
+
+**Hints:**
+* Child components
+* @Input properties in child components
+* Emitting events from child components
+* Subscribing to events from child components
 
 ### Kata 5 - Services
 **Objectives:**
 
 * Learn how to leverage services inside of your Angular 2 application.
 * Use dependency injection to add your service to your component.
+* Use lifecycle hooks to perform actions. 
 
 **Instructions**
 
@@ -110,7 +117,13 @@ You continue to impress by separating all of the concerns.  Your next task is to
 
 * Create a service that returns the expense data that is currently on your ExpenseList component.
 * Inject the newly created service into the ExpenseList component.
-* Modify your component to read the data from your new service and remove the old data.
+* Modify your component to read the data from your new service and remove the old data.  HINT: lifecycle hooks would come in handy here!
+
+**Hints:**
+
+* Services overview
+* Adding a service to a component
+* Lifecycle hooks
 
 ### Kata 6 - RxJS, Observables and HTTP
 
@@ -120,3 +133,21 @@ You continue to impress by separating all of the concerns.  Your next task is to
 * Learn how to use Observables in your Angular 2 application.
 * Use the Angular 2 HTTP Service to communicate with an HTTP API.
 * Use the async pipe to display data.
+
+**Instructions**
+
+Your data store from the previous example is cool, but your boss that it might not be the best idea to store expense data inside of an Angular 2 component OR service.  (Wild idea, huh?)
+
+Expenses are now stored on a SQL database and are accessible by accessing the api/expenses.json endpoint.
+
+(Ok, ok, expenses are actually stored in a JSON file and not in a SQL database - let your suspension of disbelief kick in, will ya?!)
+
+* Remove all expenses from the ExpenseService.
+* Add a reference to the angular/http and RxJS libraries.
+* Using the HTTP library, make a method that makes a GET call to api/expenses.json.
+* Using lifecycle hooks, call that service method when your main component loads and display the Expense data.
+
+**Hints:**
+
+* Observable overview
+* Angular 2's Http service
