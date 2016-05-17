@@ -10,16 +10,17 @@ If you're attending this workshop in the near future, please be sure to read the
 ## Subjects
 We'll be covering a wide variety of subjects in a very short amount of time (only 8 hours!)  Here is the rough order:
 
-Subject | Time | Links
-------- | ---- | -----
-TypeScript basics | 30 minutes | TBD
-Angular 2 - Hello World | 45 minutes | TBD
-Angular 2 - Components and templating | 60 minutes | TBD
-Angular 2 - Built-in directives and pipes | 45 minutes | TBD
-Angular 2 - Nested components | 45 minutes | TBD
-Angular 2 - Services | 30 minutes | TBD
-ASP.NET Core | 45 minutes | TBD
-Angular 2 - RxJS, Observables, and HTTP | 60 minutes | TBD
+Subject | Time
+------- | ----
+Intro | 10 minutes | 
+TypeScript basics | 30 minutes
+Angular 2 - Hello World | 45 minutes
+Angular 2 - Components and templating | 60 minutes
+Angular 2 - Built-in directives and pipes | 45 minutes
+Angular 2 - Nested components | 45 minutes
+Angular 2 - Services | 30 minutes
+ASP.NET Core | 45 minutes
+Angular 2 - RxJS, Observables, and HTTP | 60 minutes
 
 ## License
 

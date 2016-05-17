@@ -31,6 +31,7 @@ This one will be a follow-along kata!  No specific instructions per se.
 * Use the `\*ngFor` directive to display lists of data.
 * Hide and show elements conditionally using the `\*ngIf` directive.
 * Wire events to elements inside of your components.
+* Learn about two-way binding with ngModel.
 
 **Instructions:**
 You've been asked to update a small SPA that displays workshop data for an upcoming conference.
@@ -41,38 +42,35 @@ You've been asked to update a small SPA that displays workshop data for an upcom
 
 **Hints:**
 
-[Component templates](hints/template.md "Component HTML can be stored in the `template` property of the @Component() declaration OR added to a separate file and referenced on the component using the templateUrl property.")
-[\*ngFor directive](hints/ngfor.md "*ngFor is case sensitive and the syntax is exactly like ES6/TypeScripts for loop: *ngFor="let obj of list".  Note the "of", not "in" like in C#! Click for an example.") 
-[Event handlers](hints/events.md 'Events are bound to an element using the () syntax: (click)="doSomething()" Click for more info!')
-[\*ngIf directive](hints/ngif.md "*ngIf evaluates an expression and if the expression is truthy, the element is rendered: *ngIf="firstName".  Click for more info!")
+* [Component templates](hints/template.md "Component HTML can be stored in the `template` property of the @Component() declaration OR added to a separate file and referenced on the component using the templateUrl property.")
+* [\*ngFor directive](hints/ngfor.md "*ngFor is case sensitive and the syntax is exactly like ES6/TypeScripts for loop: *ngFor="let obj of list".  Note the "of", not "in" like in C#! Click for an example.")
+* [\*ngIf directive](hints/ngif.md "*ngIf evaluates an expression and if the expression is truthy, the element is rendered: *ngIf="firstName".  Click for more info!")
+* [Event handlers](hints/events.md 'Events are bound to an element using the () syntax: (click)="doSomething()" Click for more info!')
 
-### Kata 3 - Built-in directives and pipes
+### Kata 3 - Altering display with pipes and styles
 
 **Objectives:**
 
-* Learn about two-way binding with ngModel.
 * Use pipes to format dates, strings, and numbers.
 * Use `ngStyle`, `ngClass`, the `style` property, and the `class` property to style your elements.
 
 **Instructions:**
 
-A junior programmer in your division started on an Angular 2 app to display expense data.  However, he didn't format the data inside the grid properly (we all know managers love properly formatted data), which means that you get to use your newfound knowledge of Angular 2 pipes to format the data!
+A junior programmer in your division started on an Angular 2 app to display expense data.  However, he didn't format the data inside the grid properly (we all know managers love properly formatted data), which means that you get to use your newfound knowledge of Angular 2 pipes to format the data!  You'll also get to change other aspects of the appearance of some elements, including coloring (we all know managers love colors.)
 
-* Modify the Amount Reimbursable 
 * Display all dollar amounts in USD using the currency pipe.
 * Display all percent amounts using the percent pipe.
 * For negative dollar amounts, color the dollar amount text red. (HINT: ternary expressions can be used to determine truthyness!)
 * Apply the "warning" class to the expense row if the expense is unapproved.  (An expense is considered approved if the ApprovedBy property is truthy.)
 * Display the Approved By first and last name, in uppercase.  (Replace that ugly JSON display!)
 * Format the Expense Date like this: MM-dd-yyyy
+* At the top of the expense app, add a text box that binds (in a two-way fashion!) to the userName on your component.
 
-**HINTS:**
+**Hints:**
 
-[Pipes basics](hints/pipes.md "Pipes alter the display of interpolated expressions.  Click for more info!")
-
-[Styles and CSS classes](hints/styles.md "Too much goodness to put into a tooltip.  Click for more info!")
-
-[Two-way binding with ngModel](hints/ngmodel.md "ngModel expressions bind an input to a component property.  Remember to use the box of bananas syntax: [(ngModel)]="firstName" Click for an example!")
+* [Pipes basics](hints/pipes.md "Pipes alter the display of interpolated expressions.  Click for more info!")
+* [Styles and CSS classes](hints/styles.md "Too much goodness to put into a tooltip.  Click for more info!")
+* [Two-way binding with ngModel](hints/ngmodel.md "ngModel expressions bind an input to a component property.  Remember to use the box of bananas syntax: [(ngModel)]="firstName" Click for an example!")
 
 ### Kata 4 - Nested components
 
@@ -85,22 +83,34 @@ A junior programmer in your division started on an Angular 2 app to display expe
 
 **Instructions:**
 
-Your boss is so impressed with your skills with the expense app, he's asked you to make it even cooler.  Being the awesome programmer that you are, you've decided to take matters into your own hands and start separating concerns on the page.
+Your boss is so impressed with your skills with the expense app, he's asked you to make it even cooler - he wants a detail display for the expense that shows the amount and allows the user to approve the expense.  Of course, being the awesome programmer that you are, you've decided to take matters into your own hands and are making sure to separate concerns on the page so you don't end up with the dreaded monolith...
 
-* Separate the individual expense row into a separate component.
-* 
+* Create a child component that with the following functionality:
+	* An input property that takes an Expense.
+	* A properly formatted display of the expense amount.
+	* A display of the expense description.
+	* An event that can be subscribed to called expenseApproved that transmits the Expense object.
+	* A button that allows you to approve the selected expense.  Clicking the button will fire the expenseApproved event and transmit the Expense property that you inputted.
+* Have the parent component subscribe to the expenseApproved event - when the transmitted expense is approved, set its ApprovedBy property to the `name` property. 
 
-HINT: your separate expense row component will probably have a 
+**Take it a step farther**
+
+* Make the Expense Amount in the child component an input textbox.  THE CATCH?  No two-way binding, which means no ngModel!
+* Instead, have two buttons - Save and Cancel.  Save will transmit an expenseAmountChanged event that can be subscribed to.  Cancel resets the textbox to the original expense amount.
 
 ### Kata 5 - Services
 **Objectives:**
 
-* Learn how to leverage services to read and write data inside of your Angular 2 application.
+* Learn how to leverage services inside of your Angular 2 application.
 * Use dependency injection to add your service to your component.
 
 **Instructions**
 
-You continue to impress by separating all of the concerns.  Your next task is to separate your expense data into a separate data store.  
+You continue to impress by separating all of the concerns.  Your next task is to separate your expense data into a separate data store.
+
+* Create a service that returns the expense data that is currently on your ExpenseList component.
+* Inject the newly created service into the ExpenseList component.
+* Modify your component to read the data from your new service and remove the old data.
 
 ### Kata 6 - RxJS, Observables and HTTP
 
@@ -108,7 +118,5 @@ You continue to impress by separating all of the concerns.  Your next task is to
 
 * Learn the differences between Observables and Promises.
 * Learn how to use Observables in your Angular 2 application.
-* Create a RESTful API using ASP.NET Core.
 * Use the Angular 2 HTTP Service to communicate with an HTTP API.
 * Use the async pipe to display data.
-* Use component lifecycle hooks to trigger events when components are created and destroyed.

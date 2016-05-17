@@ -44,3 +44,12 @@ export class AppComponent {
                              { Name: "Using Waterfall over Agile", Speaker: "Alton B.", Number: "WS311", StartTime: "10:00 AM", Students: ["Jordie F.", "Margie T.", "John B."] },
                              { Name: "Building SPAs with Angular 2", Speaker: "Spencer S.", Number: "WS100", StartTime: "11:00 AM", Students: ["George D.", "Alan T.", "Janey W."] },];
 }
+
+
+let customerName = document.getElementById("#customerName");
+customerName.style.color = "red";
+
+export class MyComponent {
+    myColor = "red";
+    customer = {Name: "David"};
+}
