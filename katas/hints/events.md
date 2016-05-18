@@ -4,11 +4,11 @@ Event handlers (such as click) can reference functions within the component OR r
 
 * This binds the click event to the `doSomething()` function within the component
 ```html
-<button (click)="doSomething()" />
+<button (click)="doSomething()">Click me!</button>
 ```
 * This button sets the `employee` property in the component to the `emp` property from within the *ngFor loop
 ```html
 <div *ngFor="let emp in employees">
-	<button (click)="employee = emp;" />
+	<button (click)="employee = emp;">Click me!</button>
 </div>	<!-- end of ngFor -->
 ```
