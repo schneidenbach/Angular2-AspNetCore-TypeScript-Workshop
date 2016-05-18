@@ -24,7 +24,6 @@ namespace Angular2
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             loggerFactory.AddConsole(LogLevel.Debug);
-            
             app.UseStaticFiles();
 
             if (env.IsDevelopment())
