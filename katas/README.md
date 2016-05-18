@@ -148,5 +148,5 @@ Expenses are now stored on a SQL database and are accessible by accessing the ap
 
 **Hints:**
 
-* Angular 2's Http service
-* Async pipe
+* [Angular 2's Http service](hints/http.md "Angular's Http service allows you to make HTTP calls within your Angular 2 application.  Click to learn more!")
+* [Async pipe](hints/asyncpipe.md "The async pipe makes it very easy to emit the result of an Observable or promise in your view.  Click for an example!")
