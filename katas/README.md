@@ -91,6 +91,8 @@ Your boss is so impressed with your skills with the expense app, he's asked you 
 	* A display of the expense description.
 	* An event that can be subscribed to called expenseApproved that transmits the Expense object.
 	* A button that allows you to approve the selected expense.  Clicking the button will fire the expenseApproved event and transmit the Expense property that you inputted.
+* Add the new child component below the parent component expense table.
+* Add a button that selects that expense as the "current expense" (similar to what we did in kata 2.)
 * Have the parent component subscribe to the expenseApproved event - when the transmitted expense is approved, set its ApprovedBy property to the `name` property. 
 
 **Take it a step further:**
