@@ -10,7 +10,7 @@ There are three steps to creating a child component:
 
 Example:
 
-1. Declare
+#### Declare
 
 ```typescript
 @Component({
@@ -20,7 +20,7 @@ Example:
 export class MyChildComponent {}
 ```
 
-2. Import
+#### Import
 
 ```typescript
 import {MyChildComponent} from "./mychild.component";	//import here!
@@ -32,7 +32,7 @@ import {MyChildComponent} from "./mychild.component";	//import here!
 export class AppComponent { }
 ```
 
-3. Add
+#### Add
 
 ```typescript
 import {MyChildComponent} from "./mychild.component";

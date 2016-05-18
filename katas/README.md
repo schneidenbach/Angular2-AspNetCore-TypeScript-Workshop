@@ -72,7 +72,7 @@ A junior programmer in your division started on an Angular 2 app to display expe
 * [Styles and CSS classes](hints/styles.md "Too much goodness to put into a tooltip.  Click for more info!")
 * [Two-way binding with ngModel](hints/ngmodel.md "ngModel expressions bind an input to a component property.  Remember to use the box of bananas syntax: [(ngModel)]="firstName" Click for an example!")
 
-### Kata 4 - Nested components
+### Kata 4 - Child components
 
 **Objectives:**
 
@@ -108,7 +108,7 @@ Your boss is so impressed with your skills with the expense app, he's asked you 
 
 * Learn how to leverage services inside of your Angular 2 application.
 * Use dependency injection to add your service to your component.
-* Use lifecycle hooks to perform actions. 
+* Use lifecycle hooks to perform actions when your components load/unload.
 
 **Instructions**
 

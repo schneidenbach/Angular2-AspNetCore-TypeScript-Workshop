@@ -7,7 +7,7 @@ Let's improve upon the Firework example from the [@Input properties hint](inputp
 1. Import the EventEmitter and Output class in your child component.
 2. Add an EventEmitter property to the child component with an @Output() decorator.
 3. Declare a function in the parent that takes a Firework as a parameter - this will be the function that is triggered when the child event is triggered.  (I call it a subscriber function!)
-3. Bind the parent event to the child using the () syntax.  (The event parameter is always $event within the () syntax.)
+4. Bind the parent event to the child using the () syntax.  (The event parameter is always $event within the () syntax.)
 
 [See the full demo here](http://plnkr.co/edit/D0Id3ZZo3U1IhAhxVoop?p=preview)
 
