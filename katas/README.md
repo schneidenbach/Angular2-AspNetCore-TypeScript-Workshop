@@ -120,9 +120,9 @@ You continue to impress by separating all of the concerns.  Your next task is to
 
 **Hints:**
 
-* Services overview
-* Adding a service to a component
-* Lifecycle hooks
+* [Services overview](hints/services.md "Services are a great way to provide data to components and enforce separation of concerns in your application.  Click for an example!")
+* [Adding a service to a component](hints/addservicetocomponent.md "Services are very easy to add to a component once created.  Click to learn more!")
+* [Lifecycle hooks](hints/lifecyclehooks.md "Lifecycle hooks allow you to run events related to your component's life cycle, including creation and destruction.  Click for more info!")
 
 ### Kata 6 - RxJS, Observables and HTTP
 
@@ -148,5 +148,5 @@ Expenses are now stored on a SQL database and are accessible by accessing the ap
 
 **Hints:**
 
-* Observable overview
 * Angular 2's Http service
+* Async pipe
