@@ -1,22 +1,10 @@
-import {Component} from '@angular/core';
-import {Expense} from './expense';
-import {Employee} from './employee';
+import {Injectable} from "@angular/core";
+import {Expense} from "./expense";
 
-@Component({
-    selector: 'expense-app',
-    templateUrl: './app/app.component.html',
-    styles: [
-        `
-        .negative-amount {
-            //TODO: style this maybe?
-        }
-        `
-    ]
-})
-export class AppComponent {
-    userName: string;   //TODO: populate
-    
-    expenses: Array<Expense> = [
+@Injectable()
+export class ExpenseService {
+    getExpenses() : Expense[] {
+        return [
         {
             Amount: 100.43,
             AmountReimbursable: 100.43,
@@ -74,16 +62,5 @@ export class AppComponent {
             ExpenseDate: new Date(2016, 4, 22)
         },
     ];
-    
-    getTotal() {
-        return this.expenses.reduce((prev, current) => prev + current.Amount, 0);
-    }
-    
-    getReimbursableTotal() {
-        return this.expenses.reduce((prev, current) => prev + current.AmountReimbursable, 0);
-    }
-    
-    getTotalReimbursablePercent() {
-        return (this.getReimbursableTotal()) / (this.getTotal() || 0);
     }
 }

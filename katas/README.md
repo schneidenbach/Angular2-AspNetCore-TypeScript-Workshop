@@ -99,10 +99,9 @@ Your boss is so impressed with your skills with the expense app, he's asked you 
 * Instead, have two buttons - Save and Cancel.  Save will transmit an expenseAmountChanged event that the parent will subscribe to and use to change the amount.  Cancel resets the textbox to the original expense amount.
 
 **Hints:**
-* Child components
-* @Input properties in child components
-* Emitting events from child components
-* Subscribing to events from child components
+* [Child components](hints/childcomponents.md "Child components are components that exist inside of other components.  Click for more info!")
+* [@Input properties in child components](hints/inputproperties.md "@Input properties allow you to pass data from your parent to your child component!  Click for more info.")
+* [Emitting events from child components using @Output](hints/outputproperties.md "@Output properties allow you to transmit events from the parent to the child!  Click for more info and an example!")
 
 ### Kata 5 - Services
 **Objectives:**

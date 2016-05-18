@@ -1,6 +1,9 @@
 <h3>
-    Expenses
+    Expenses Approval for {{ userName || "(no name provided)" }}
 </h3>
+<div>
+    <!-- TODO: add my name -->
+</div>
 <table class="table">
     <tr>
         <th>Expense Date</th>
@@ -24,10 +27,10 @@
             {{ expense.Amount }}
         </td>
         <td>
-            <input type="number" class="form-control" [value]="expense.AmountReimbursable">
+            {{ expense.AmountReimbursable }}
         </td>
         <td>
-            TODO: add this
+            TODO: add reimbursement percent
         </td>
     </tr>
     <tr>
