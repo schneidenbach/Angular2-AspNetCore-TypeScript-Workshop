@@ -1,0 +1,44 @@
+<h3>
+    Expenses Approval for {{ userName || "(no name provided)" }}
+</h3>
+<div>
+    Please enter your name: <input type="text" [(ngModel)]="userName" />    
+</div>
+<table class="table">
+    <tr>
+        <th>Expense Date</th>
+        <th>Description</th>
+        <th>Approved By</th>
+        <th>Amount</th>
+        <th>Amount Reimbursable</th>
+        <th>Reimbursement %</th>
+    </tr>
+    <tr *ngFor="let expense of expenses" [class.warning]="!expense.ApprovedBy">
+        <td>
+            {{ expense.ExpenseDate | date:'MM-dd-yyyy' }}
+        </td>
+        <td>
+            {{ expense.Description }}
+        </td>
+        <td>
+            {{ expense.ApprovedBy?.FirstName | uppercase }} {{ expense.ApprovedBy?.LastName | uppercase }}
+        </td>
+        <td [class.negative-amount]="expense.Amount < 0">
+            {{ expense.Amount | currency:"USD":true }}
+        </td>
+        <td>
+            {{ expense.AmountReimbursable | currency:"USD":true }}
+        </td>
+        <td>
+            {{ expense.AmountReimbursable / expense.Amount | percent }}
+        </td>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>{{ getTotal() | currency:"USD":true }}</th>
+        <th>{{ getReimbursableTotal() | currency:"USD":true }}</th>
+        <th>{{ getTotalReimbursablePercent() | percent }}</th>
+    </tr>
+</table>

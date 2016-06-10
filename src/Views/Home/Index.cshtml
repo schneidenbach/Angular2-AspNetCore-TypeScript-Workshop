@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+<head>
+    <title>Angular 2 QuickStart</title>
+	<script src="~/node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="~/node_modules/zone.js/dist/zone.js"></script>
+    <script src="~/node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="~/node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="~/systemjs.config.js"></script>
+
+    <script>
+        System.import('app')
+              .then(null, console.error.bind(console));
+    </script>
+    
+</head>
+
+<body>
+    <h1>Angular 2 and ASP.NET Core Demo</h1>
+    <my-app></my-app>
+    <hr>
+    <a asp-action="About" asp-controller="Home">About page</a>
+</body>
+
+</html>

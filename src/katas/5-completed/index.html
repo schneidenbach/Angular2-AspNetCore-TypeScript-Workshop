@@ -1,0 +1,29 @@
+
+<html>
+<head>
+    <title>Angular 2 Course!</title>
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="../node_modules/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
+	<script src="../node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="../node_modules/zone.js/dist/zone.js"></script>
+    <script src="../node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="../node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="../systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err);  });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Angular 2 Katas</h1>
+        <div class="row">
+            <div class="col-sm-12">
+                <expense-app><h4>Loading...</h4></expense-app>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
