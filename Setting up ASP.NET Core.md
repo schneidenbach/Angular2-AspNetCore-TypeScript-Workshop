@@ -1,4 +1,4 @@
-# Installing ASP.NET Core on a Windows machine
+# Setting Up ASP.NET Core
 These are the step-by-step instructions that you will need to follow to get ASP.NET Core running on your computer.  I've included both Mac and Windows instructions in this repo.
 
 If you want to be able to follow along on your laptop as we use ASP.NET Core during the workshop, you **must** be able to run the demo project at the end of these instructions - we simply won't have time to go through .  If you run into trouble, please feel free to contact me for assistance.
