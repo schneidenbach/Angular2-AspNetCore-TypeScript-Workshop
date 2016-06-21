@@ -14,7 +14,7 @@ If you want to be able to follow along on your laptop as we use ASP.NET Core dur
 1. Download [this repo](https://github.com/schneidenbach/Angular2-AspNetCore-TypeScript-Workshop) as a ZIP file and unzip it to a directory of your choosing. (If you're a Git user, feel free to clone it instead.)
 2. Open Visual Studio Code.
 3. Go to File -> Open Folder.
-4. Navigate to the folder where your source code was downloaded and open the "aspnetcore" folder.
+4. Navigate to the folder where your source code was downloaded and click Open Folder.
 5. Type Ctrl-P to open up the command palette, then type `ext install csharp` and press Enter.  This will install the C# extension for Visual Studio Code.
 6. After a minute, a popup will come up saying that the C# extension has been installed - click the Restart button.
 7. Once Visual Studio Code has been restarted, press Ctrl-Shift-C to open up a command prompt.
