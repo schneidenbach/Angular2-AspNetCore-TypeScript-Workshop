@@ -28,15 +28,15 @@ This one will be a follow-along kata!  No specific instructions per se.
 
 * Learn about the advantages of Web Components and how they relate to Angular 2 components.
 * Use either the `template` or `templateUrl` properties on a component to store your component HTML.
-* Use the `\*ngFor` directive to display lists of data.
-* Hide and show elements conditionally using the `\*ngIf` directive.
+* Use the `*ngFor` directive to display lists of data.
+* Hide and show elements conditionally using the `*ngIf` directive.
 * Wire events to elements inside of your components.
 * Learn about two-way binding with ngModel.
 
 **Instructions:**
 You've been tasked with working on a SPA that deals with expense reporting and approval!
 
-* Display the array of expenses (the expenses property of your component) in your view.  All properties should be displayed.  (HINT: use the headers on the table to determine where properties go!)
+* Display the array of expenses (the expenses property of your component) in your view.  The Amount, Amount Reimbursable, Approved By, Description, and Expense Date should be displayed.  (HINT: use the headers on the table to determine where properties go!)
 * Add a button in each row that, when clicked, displays an element with the following information from the expense:
 	* Expense amount
 	* ApprovedBy name
@@ -141,13 +141,13 @@ You continue to impress by separating all of the concerns.  Your next task is to
 
 Your data store from the previous example is cool, but your boss that it might not be the best idea to store expense data inside of an Angular 2 component OR service.  (Wild idea, huh?)
 
-Expenses are now stored on a SQL database and are accessible by accessing the api/expenses.json endpoint.
+Expenses are now stored on a SQL database and are accessible by accessing the `api/Expenses` endpoint.
 
-(Ok, ok, expenses are actually stored in a JSON file and not in a SQL database - let your suspension of disbelief kick in, will ya?!)
+(Ok, ok, expenses are actually stored directly in the controller and not in a SQL database - let your suspension of disbelief kick in, will ya?!)
 
 * Remove all expenses from the ExpenseService.
 * Add a reference to the angular/http and RxJS libraries.
-* Using the HTTP library, make a method that makes a GET call to api/expenses.json.
+* Using the HTTP library, make a method that makes a GET call to `api/Expenses`.
 * Using lifecycle hooks, call that service method when your main component loads and display the Expense data.
 
 **Hints:**
