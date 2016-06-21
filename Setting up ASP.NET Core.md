@@ -17,9 +17,9 @@ If you want to be able to follow along on your laptop as we use ASP.NET Core dur
 4. Navigate to the folder where your source code was downloaded and open the "aspnetcore" folder.
 5. Type Ctrl-P to open up the command palette, then type `ext install csharp` and press Enter.  This will install the C# extension for Visual Studio Code.
 6. After a minute, a popup will come up saying that the C# extension has been installed - click the Restart button.
-7. Once Visual Studio Code has been restarted, press Ctrl-Shift-C to open up a command line.
-8. After that is done, type `npm install` and press Enter.  This will install all of the project dependencies, including Angular 2 and ASP.NET Core.
-9. After that is done, type `npm start` to run the application.  Note that this will take a minute as it is copying all of the client-side dependencies to wwwroot.
+7. Once Visual Studio Code has been restarted, press Ctrl-Shift-C to open up a command prompt.
+8. Make sure you are in the src directory (type cd src and hit Enter to be sure) and type `npm install` and press Enter.  This will install all of the project dependencies, including Angular 2 and ASP.NET Core.
+9. After that is done, type `npm start` to run the application.
 10. After a few seconds, it should say "Now listening on: http://localhost:5000."
 11. Open a browser window and navigate to http://localhost:5000.
 12. If everything is setup correctly, after a few seconds a list of courses will pop up on the screen.  Congrats - you've set up ASP.NET Core!
