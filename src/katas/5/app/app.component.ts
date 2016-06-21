@@ -1,7 +1,6 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Expense} from '../../expenses/expense';
 import {Employee} from '../../expenses/employee';
-import {ExpenseAmountChangedEvent, ExpenseDetailComponent} from "./expense-detail.component";
 
 @Component({
     selector: 'expense-app',
@@ -13,14 +12,10 @@ import {ExpenseAmountChangedEvent, ExpenseDetailComponent} from "./expense-detai
             color: red;
         }
         `
-    ],
-    directives: [ExpenseDetailComponent]
+    ]
 })
 export class AppComponent {
-    firstName: string;
-    lastName: string;
-    selectedExpense: Expense;
-
+    userName: string;
     expenses: Array<Expense> = [
         {
             Amount: 100.43,
@@ -93,35 +88,4 @@ export class AppComponent {
     getTotalReimbursablePercent() {
         return (this.getReimbursableTotal()) / (this.getTotal() || 0);
     }
-
-    expenseApproved(expense: Expense) {
-        let firstName = this.firstName;
-        let lastName = this.lastName;
-
-        if (!firstName) {
-            alert("Please enter your first name.");
-            return;
-        }
-        if (!lastName) {
-            alert("Please enter your last name.");
-            return;
-        }
-
-        for (let exp of this.expenses) {
-            if (exp === expense && !exp.ApprovedBy)
-                exp.ApprovedBy = {FirstName: this.firstName, LastName: this.lastName};
-        }
-    }
-
-    expenseAmountChanged(args: ExpenseAmountChangedEvent) {
-        let expense = args.expense;
-        let newAmount = args.amount;
-
-        for (let exp of this.expenses) {
-            if (exp === expense)
-                exp.Amount = newAmount;
-        }
-    }
 }
-
-

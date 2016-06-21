@@ -1,11 +1,8 @@
 <h3>
-    Expenses Approval for {{ firstName + " " + lastName || "(no name provided)" }}
+    Expenses Approval for {{ userName || "(no name provided)" }}
 </h3>
-<div class="row">
-    <div class="col-sm-12">
-        Please enter your first name: <input type="text" [(ngModel)]="firstName" /><br>
-        Please enter your last name: <input type="text" [(ngModel)]="lastName" />
-    </div>
+<div>
+    Please enter your name: <input type="text" [(ngModel)]="userName" />    
 </div>
 <table class="table">
     <tr>
@@ -15,11 +12,10 @@
         <th>Amount</th>
         <th>Amount Reimbursable</th>
         <th>Reimbursement %</th>
-        <th>Actions</th>
     </tr>
     <tr *ngFor="let expense of expenses" [class.warning]="!expense.ApprovedBy">
         <td>
-            {{ expense.ExpenseDate | date }}
+            {{ expense.ExpenseDate | date:'MM-dd-yyyy' }}
         </td>
         <td>
             {{ expense.Description }}
@@ -36,9 +32,6 @@
         <td>
             {{ expense.AmountReimbursable / expense.Amount | percent }}
         </td>
-        <td>
-            <button class="btn btn-default" (click)="selectedExpense = expense">Select Expense</button>
-        </td>
     </tr>
     <tr>
         <th></th>
@@ -48,11 +41,4 @@
         <th>{{ getReimbursableTotal() | currency:"USD":true }}</th>
         <th>{{ getTotalReimbursablePercent() | percent }}</th>
     </tr>
-    <hr>
-    <div *ngIf="selectedExpense">
-        <expense-detail [expense]="selectedExpense" (expenseAmountChanged)="expenseAmountChanged($event)" (expenseApproved)="expenseApproved($event)"></expense-detail>
-    </div>
 </table>
-
-
-

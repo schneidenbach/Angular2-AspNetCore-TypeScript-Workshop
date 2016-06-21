@@ -1,0 +1,43 @@
+<h3>
+    Expenses Approval for {{ userName || "(no name provided)" }}
+</h3>
+Please enter your name: <strong>TODO: add textbox here</strong>
+<hr>
+<table class="table">
+    <tr>
+        <th>Expense Date</th>
+        <th>Description</th>
+        <th>Approved By</th>
+        <th>Amount</th>
+        <th>Amount Reimbursable</th>
+        <th>Reimbursement %</th>
+    </tr>
+    <tr *ngFor="let expense of expenses">
+        <td>
+            {{ expense.ExpenseDate  }}
+        </td>
+        <td>
+            {{ expense.Description }}
+        </td>
+        <td>
+            {{ expense.ApprovedBy | json }}
+        </td>
+        <td>
+            {{ expense.Amount }}
+        </td>
+        <td>
+            {{ expense.AmountReimbursable }}
+        </td>
+        <td>
+            {{ expense.AmountReimbursable / expense.Amount }}
+        </td>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>{{ getTotal() }}</th>
+        <th>{{ getReimbursableTotal() }}</th>
+        <th>{{ getTotalReimbursablePercent() }}</th>
+    </tr>
+</table>

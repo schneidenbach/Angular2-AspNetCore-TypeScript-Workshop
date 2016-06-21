@@ -13,8 +13,7 @@ import {ExpenseAmountChangedEvent, ExpenseDetailComponent} from "./expense-detai
             color: red;
         }
         `
-    ],
-    directives: [ExpenseDetailComponent]
+    ]
 })
 export class AppComponent {
     firstName: string;
@@ -95,32 +94,13 @@ export class AppComponent {
     }
 
     expenseApproved(expense: Expense) {
-        let firstName = this.firstName;
-        let lastName = this.lastName;
-
-        if (!firstName) {
-            alert("Please enter your first name.");
-            return;
-        }
-        if (!lastName) {
-            alert("Please enter your last name.");
-            return;
-        }
-
-        for (let exp of this.expenses) {
-            if (exp === expense && !exp.ApprovedBy)
-                exp.ApprovedBy = {FirstName: this.firstName, LastName: this.lastName};
-        }
+        //TODO: add expense approved logic
+        //if first name or last name is blank, don't allow event to complete
+        //otherwise, set ApprovedBy equal to new object with firstName and lastName from component
     }
 
     expenseAmountChanged(args: ExpenseAmountChangedEvent) {
-        let expense = args.expense;
-        let newAmount = args.amount;
-
-        for (let exp of this.expenses) {
-            if (exp === expense)
-                exp.Amount = newAmount;
-        }
+        //TODO: fill out this event
     }
 }
 

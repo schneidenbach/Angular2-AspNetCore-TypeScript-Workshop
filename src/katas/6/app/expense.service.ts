@@ -1,27 +1,14 @@
-import {Component} from '@angular/core';
-import {Expense} from '../../expenses/expense';
-import {Employee} from '../../expenses/employee';
+import {Injectable} from "@angular/core";
+import {Expense} from "../../expenses/expense";
 
-@Component({
-    selector: 'expense-app',
-    templateUrl: 'app.component.html',
-    moduleId: module.id,
-    styles: [
-        `
-        .negative-amount {
-            color: red;
-        }
-        `
-    ]
-})
-export class AppComponent {
-    userName: string;
-    selectedExpense: Expense;
-
-    expenses: Array<Expense> = [
+@Injectable()
+export class ExpenseService {
+    getExpenses() : Expense[] {
+        return [
         {
             Amount: 100.43,
             AmountReimbursable: 100.43,
+            ApprovedBy: undefined,
             Description: "Laptop adapter",
             ExpenseDate: new Date(2016, 4, 23)
         },
@@ -30,66 +17,50 @@ export class AppComponent {
             AmountReimbursable: 77.41,
             ApprovedBy: {FirstName: "Gary", LastName: "Sandberg"},
             Description: "Lunch w/ client",
-            ExpenseDate: new Date(2016, 4, 26),
-            ApprovalComment: "Client had chicken salad sandwich"
+            ExpenseDate: new Date(2016, 4, 26)
         },
         {
             Amount: 35.71,
             AmountReimbursable: 22.45,
             ApprovedBy: {FirstName: "John", LastName: "Lackey"},
             Description: "Gas",
-            ExpenseDate: new Date(2016, 4, 24),
-            ApprovalComment: "Dump truck"
+            ExpenseDate: new Date(2016, 4, 24)
         },
         {
             Amount: 11.23,
             AmountReimbursable: 11.23,
             ApprovedBy: {FirstName: "Jeff", LastName: "Grauss"},
             Description: "Chipotle",
-            ExpenseDate: new Date(2016, 4, 29),
-            ApprovalComment: "Chipotle is typically delicious"
+            ExpenseDate: new Date(2016, 4, 29)
         },
         {
             Amount: -11.23,
             AmountReimbursable: 0,
             ApprovedBy: {FirstName: "Jeff", LastName: "Grauss"},
             Description: "Refund for double charge",
-            ExpenseDate: new Date(2016, 4, 29),
-            ApprovalComment: "They charged me twice!"
+            ExpenseDate: new Date(2016, 4, 29)
         },
         {
             Amount: 246.75,
             AmountReimbursable: 150.75,
             ApprovedBy: {FirstName: "Morgan", LastName: "Trellman"},
             Description: "Development software",
-            ExpenseDate: new Date(2016, 4, 21),
-            ApprovalComment: "MSDN license"
+            ExpenseDate: new Date(2016, 4, 21)
         },
         {
             Amount: 327.55,
             AmountReimbursable: 327.55,
+            ApprovedBy: undefined,
             Description: "Monitors",
             ExpenseDate: new Date(2016, 4, 22)
         },
         {
             Amount: -114.33,
             AmountReimbursable: 0,
+            ApprovedBy: undefined,
             Description: "Refund from Amazon",
             ExpenseDate: new Date(2016, 4, 22)
         },
     ];
-    
-    getTotal() {
-        return this.expenses.reduce((prev, current) => prev + current.Amount, 0);
-    }
-    
-    getReimbursableTotal() {
-        return this.expenses.reduce((prev, current) => prev + current.AmountReimbursable, 0);
-    }
-    
-    getTotalReimbursablePercent() {
-        return (this.getReimbursableTotal()) / (this.getTotal() || 0);
     }
 }
-
-

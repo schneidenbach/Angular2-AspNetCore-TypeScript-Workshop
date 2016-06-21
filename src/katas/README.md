@@ -65,7 +65,7 @@ A junior programmer in your division started on an Angular 2 app to display expe
 * For negative dollar amounts, color the Amount text red. (HINT: ternary expressions can be used to determine truthyness!)
 * Apply the "warning" class to the expense row if the expense is unapproved.  (An expense is considered approved if the ApprovedBy property is truthy.)
 * Display the Approved By first and last name, in uppercase.  (Replace that ugly JSON display!)  HINT: some ApprovedBy properties are undefined, so you will have to use a special operator inside of your expression to display them... 
-* Format the Expense Date like this: MM-dd-yyyy
+* Format the Expense Date using the date pipe.
 * At the top of the expense app, add a text box that binds (in a two-way fashion!) to the userName on your component.
 
 **Hints:**

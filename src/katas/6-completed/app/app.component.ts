@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Expense} from './expense';
-import {Employee} from './employee';
+import {Expense} from '../../expenses/expense';
+import {Employee} from '../../expenses/employee';
 import {ExpenseService} from "./expense.service";
 
 @Component({
