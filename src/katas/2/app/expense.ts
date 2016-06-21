@@ -4,6 +4,8 @@ export interface Expense {
     ExpenseDate: Date;
     Amount: number;
     AmountReimbursable: number;
-    ApprovedBy: Employee;
     Description: string;
+    
+    ApprovedBy?: Employee;
+    ApprovalComment?: string; 
 }

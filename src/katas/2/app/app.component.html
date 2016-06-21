@@ -11,34 +11,20 @@
         <th>Approved By</th>
         <th>Amount</th>
         <th>Amount Reimbursable</th>
-        <th>Reimbursement %</th>
+        <th>Actions</th>
     </tr>
-    <tr *ngFor="let expense of expenses">
-        <td>
-            {{ expense.ExpenseDate }}
-        </td>
-        <td>
-            {{ expense.Description }}
-        </td>
-        <td>
-            {{ expense.ApprovedBy | json }}
-        </td>
-        <td>
-            {{ expense.Amount }}
-        </td>
-        <td>
-            {{ expense.AmountReimbursable }}
+    <tr>  <!-- TODO: iterate over and display expenses -->
+        <td colspan="5">
+            Remove the colspan and add some data!
         </td>
         <td>
             TODO: add reimbursement percent
         </td>
     </tr>
-    <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th>{{ getTotal() }}</th>
-        <th>{{ getReimbursableTotal() }}</th>
-        <th>{{ getTotalReimbursablePercent() }}</th>
-    </tr>
+    <hr>
+
+    <!-- TODO: show this when selectedExpense is selected -->
+    <div>
+        <!-- TODO: show selected expense data -->
+    </div>
 </table>
