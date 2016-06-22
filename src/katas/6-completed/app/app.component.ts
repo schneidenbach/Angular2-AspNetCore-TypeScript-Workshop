@@ -5,7 +5,8 @@ import {ExpenseService} from "./expense.service";
 
 @Component({
     selector: 'expense-app',
-    templateUrl: './app/app.component.html',
+    templateUrl: 'app.component.html',
+    moduleId: module.id,
     styles: [
         `
         .negative-amount {
@@ -17,7 +18,7 @@ import {ExpenseService} from "./expense.service";
 })
 export class AppComponent implements OnInit {
     userName: string;
-    expenses: Array<Expense>;
+    expenses: Array<Expense> = [];
     
     constructor(private expenseService: ExpenseService) { }
     
@@ -36,5 +37,13 @@ export class AppComponent implements OnInit {
     
     getTotalReimbursablePercent() {
         return (this.getReimbursableTotal()) / (this.getTotal() || 0);
+    }
+
+    toDate(date: any) {
+        if (date instanceof Date) {
+            return date;
+        }
+
+        return new Date(date);
     }
 }

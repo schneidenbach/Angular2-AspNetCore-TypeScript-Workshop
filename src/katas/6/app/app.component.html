@@ -15,7 +15,7 @@
     </tr>
     <tr *ngFor="let expense of expenses" [class.warning]="!expense.ApprovedBy">
         <td>
-            {{ expense.ExpenseDate | date:'MM-dd-yyyy' }}
+            {{ tpDate(expense.ExpenseDate) | date }}
         </td>
         <td>
             {{ expense.Description }}
