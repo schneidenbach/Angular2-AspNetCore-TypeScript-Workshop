@@ -141,13 +141,13 @@ You continue to impress by separating all of the concerns.  Your next task is to
 
 Your data store from the previous example is cool, but your boss that it might not be the best idea to store expense data inside of an Angular 2 component OR service.  (Wild idea, huh?)
 
-Expenses are now stored on a SQL database and are accessible by accessing the `api/Expenses` endpoint.
+Expenses are now stored on a SQL database and are accessible by accessing the `/api/Expenses` endpoint.
 
 (Ok, ok, expenses are actually stored directly in the controller and not in a SQL database - let your suspension of disbelief kick in, will ya?!)
 
 * Remove all expenses from the ExpenseService.
 * Add a reference to the angular/http and RxJS libraries.
-* Using the HTTP library, make a method that makes a GET call to `api/Expenses`.
+* Using the HTTP library, make a method that makes a GET call to `/api/Expenses`.
 * Using lifecycle hooks, call that service method when your main component loads and display the Expense data.
 
 **Hints:**
