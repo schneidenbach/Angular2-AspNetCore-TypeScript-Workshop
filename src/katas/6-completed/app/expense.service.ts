@@ -9,6 +9,7 @@ export class ExpenseService {
     constructor(private http: Http) {}
 
     getExpenses() : Observable<Expense[]> {
-        
+        return this.http.get("/api/Expenses")
+                        .map(resp => resp.json());
     }
 }
