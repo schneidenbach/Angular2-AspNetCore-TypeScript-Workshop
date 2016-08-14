@@ -6,7 +6,8 @@ import {Employee} from '../expenses/employee';
 //TODO: create template
 //TODO: create event for approval 
 @Component({
-    selector: 'expense-detail'
+    selector: 'expense-detail',
+    template: ''
 })
 export class ExpenseDetailComponent {}
 

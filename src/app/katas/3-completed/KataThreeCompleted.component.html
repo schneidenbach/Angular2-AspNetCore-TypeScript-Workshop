@@ -50,7 +50,7 @@
     </tr>
     <hr>
     <div *ngIf="selectedExpense">
-        <expense-detail [expense]="selectedExpense" (expenseAmountChanged)="expenseAmountChanged($event)" (expenseApproved)="expenseApproved($event)"></expense-detail>
+        <expense-detail-completed [expense]="selectedExpense" (expenseAmountChanged)="expenseAmountChanged($event)" (expenseApproved)="expenseApproved($event)"></expense-detail-completed>
     </div>
 </table>
 

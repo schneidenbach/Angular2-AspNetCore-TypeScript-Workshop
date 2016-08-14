@@ -3,7 +3,7 @@ import {Expense} from '../expenses/expense';
 import {Employee} from '../expenses/employee';
 
 @Component({
-    selector: 'expense-detail',
+    selector: 'expense-detail-completed',
     template: `
         <strong>Expense Amount:</strong> <input type="number" #expenseAmount [value]="expense.Amount" /><br>
         <strong>Expense Description:</strong> {{ expense.Description }}<br>
@@ -12,7 +12,7 @@ import {Employee} from '../expenses/employee';
         <button class="btn btn-danger" (click)="cancel()">Cancel</button>
     `
 })
-export class ExpenseDetailComponent {
+export class ExpenseDetailCompletedComponent {
     @Input() expense: Expense;
     @Output() expenseApproved = new EventEmitter<Expense>();
     @Output() expenseAmountChanged = new EventEmitter<ExpenseAmountChangedEvent>();

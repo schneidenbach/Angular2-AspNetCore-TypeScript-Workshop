@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {Expense} from '../expenses/expense';
 import {Employee} from '../expenses/employee';
-import {ExpenseAmountChangedEvent, ExpenseDetailComponent} from "./expense-detail.component";
+import {ExpenseAmountChangedEvent} from "./expense-detail.component";
 
 @Component({
     templateUrl: 'KataThreeCompleted.component.html',
@@ -12,8 +12,7 @@ import {ExpenseAmountChangedEvent, ExpenseDetailComponent} from "./expense-detai
             color: red;
         }
         `
-    ],
-    directives: [ExpenseDetailComponent]
+    ]
 })
 export class KataThreeCompletedComponent {
     firstName: string;

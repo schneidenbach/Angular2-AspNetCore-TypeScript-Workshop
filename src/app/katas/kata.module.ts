@@ -15,6 +15,12 @@ import { KataThreeCompletedComponent } from './3-completed/KataThreeCompleted.co
 import { KataFourCompletedComponent }  from './4-completed/KataFourCompleted.component';
 import { KataFiveCompletedComponent }  from './5-completed/KataFiveCompleted.component';
 
+//for kata 3
+import { ExpenseDetailComponent } from './3/expense-detail.component';
+import { ExpenseDetailCompletedComponent } from './3-completed/expense-detail.component';
+
+//for kata 4/5
+
 @NgModule({
   imports: [
     routing,
@@ -31,7 +37,9 @@ import { KataFiveCompletedComponent }  from './5-completed/KataFiveCompleted.com
     KataTwoCompletedComponent,
     KataThreeCompletedComponent,
     KataFourCompletedComponent,
-    KataFiveCompletedComponent
+    KataFiveCompletedComponent,
+    ExpenseDetailCompletedComponent,
+    ExpenseDetailComponent
   ]
 })
 export class KataModule {}
