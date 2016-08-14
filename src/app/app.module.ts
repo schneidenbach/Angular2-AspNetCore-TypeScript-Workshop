@@ -6,13 +6,15 @@ import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
 import { HomeComponent } from './Home.component';
 import { KataModule } from './katas/kata.module';
+import { HttpModule } from '@angular/http'
 
 @NgModule({
   imports: [
     routing,
     BrowserModule,
     FormsModule,
-    KataModule
+    KataModule,
+    HttpModule
   ],
   declarations: [
     AppComponent,

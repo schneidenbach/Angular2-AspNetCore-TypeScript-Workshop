@@ -5,7 +5,7 @@ import {ExpenseService} from "./expense.service";
 
 @Component({
     selector: 'expense-app',
-    templateUrl: 'app.component.html',
+    templateUrl: 'KataFourCompleted.component.html',
     moduleId: module.id,
     styles: [
         `
@@ -16,7 +16,7 @@ import {ExpenseService} from "./expense.service";
     ],
     providers: [ExpenseService]
 })
-export class AppComponent implements OnInit {
+export class KataFourCompletedComponent implements OnInit {
     userName: string;
     expenses: Array<Expense>;
     

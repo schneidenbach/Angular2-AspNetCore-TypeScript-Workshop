@@ -3,7 +3,6 @@ import {Expense} from '../expenses/expense';
 import {Employee} from '../expenses/employee';
 
 @Component({
-    selector: 'expense-app',
     templateUrl: 'KataFour.component.html',
     moduleId: module.id,
     styles: [

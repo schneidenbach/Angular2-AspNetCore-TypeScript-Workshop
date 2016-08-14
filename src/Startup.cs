@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.FileProviders;
 using System.IO;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace Angular2
 {
@@ -20,23 +22,16 @@ namespace Angular2
             services.AddMvcCore()
                     .AddRazorViewEngine()
                     .AddTagHelpersAsServices()
-                    .AddJsonFormatters();
+                    .AddJsonFormatters(config => config.ContractResolver = new DefaultContractResolver());
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             loggerFactory.AddConsole(LogLevel.Debug);
-            
+        
             app.UseFileServer(new FileServerOptions {
                 FileProvider = new PhysicalFileProvider(Directory.GetCurrentDirectory())
             });
-
-            /*
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            */
 
             app.UseMvc();
         }

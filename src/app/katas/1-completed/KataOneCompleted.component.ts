@@ -1,24 +1,12 @@
 import {Component} from '@angular/core';
 import {Expense} from '../expenses/expense';
 import {Employee} from '../expenses/employee';
-import {ExpenseAmountChangedEvent, ExpenseDetailComponent} from "./expense-detail.component";
 
 @Component({
-    selector: 'expense-app',
-    templateUrl: 'app.component.html',
     moduleId: module.id,
-    styles: [
-        `
-        .negative-amount {
-            color: red;
-        }
-        `
-    ],
-    directives: [ExpenseDetailComponent]
+    templateUrl: 'KataOneCompleted.component.html'
 })
-export class AppComponent {
-    firstName: string;
-    lastName: string;
+export class KataOneCompletedComponent {
     selectedExpense: Expense;
 
     expenses: Array<Expense> = [
@@ -81,47 +69,4 @@ export class AppComponent {
             ExpenseDate: new Date(2016, 4, 22)
         },
     ];
-    
-    getTotal() {
-        return this.expenses.reduce((prev, current) => prev + current.Amount, 0);
-    }
-    
-    getReimbursableTotal() {
-        return this.expenses.reduce((prev, current) => prev + current.AmountReimbursable, 0);
-    }
-    
-    getTotalReimbursablePercent() {
-        return (this.getReimbursableTotal()) / (this.getTotal() || 0);
-    }
-
-    expenseApproved(expense: Expense) {
-        let firstName = this.firstName;
-        let lastName = this.lastName;
-
-        if (!firstName) {
-            alert("Please enter your first name.");
-            return;
-        }
-        if (!lastName) {
-            alert("Please enter your last name.");
-            return;
-        }
-
-        for (let exp of this.expenses) {
-            if (exp === expense && !exp.ApprovedBy)
-                exp.ApprovedBy = {FirstName: this.firstName, LastName: this.lastName};
-        }
-    }
-
-    expenseAmountChanged(args: ExpenseAmountChangedEvent) {
-        let expense = args.expense;
-        let newAmount = args.amount;
-
-        for (let exp of this.expenses) {
-            if (exp === expense)
-                exp.Amount = newAmount;
-        }
-    }
 }
-
-

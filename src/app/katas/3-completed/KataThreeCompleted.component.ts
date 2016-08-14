@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
 import {Expense} from '../expenses/expense';
 import {Employee} from '../expenses/employee';
+import {ExpenseAmountChangedEvent, ExpenseDetailComponent} from "./expense-detail.component";
 
 @Component({
-    selector: 'expense-app',
-    templateUrl: 'app.component.html',
+    templateUrl: 'KataThreeCompleted.component.html',
     moduleId: module.id,
     styles: [
         `
@@ -12,10 +12,12 @@ import {Employee} from '../expenses/employee';
             color: red;
         }
         `
-    ]
+    ],
+    directives: [ExpenseDetailComponent]
 })
-export class AppComponent {
-    userName: string;
+export class KataThreeCompletedComponent {
+    firstName: string;
+    lastName: string;
     selectedExpense: Expense;
 
     expenses: Array<Expense> = [
@@ -89,6 +91,35 @@ export class AppComponent {
     
     getTotalReimbursablePercent() {
         return (this.getReimbursableTotal()) / (this.getTotal() || 0);
+    }
+
+    expenseApproved(expense: Expense) {
+        let firstName = this.firstName;
+        let lastName = this.lastName;
+
+        if (!firstName) {
+            alert("Please enter your first name.");
+            return;
+        }
+        if (!lastName) {
+            alert("Please enter your last name.");
+            return;
+        }
+
+        for (let exp of this.expenses) {
+            if (exp === expense && !exp.ApprovedBy)
+                exp.ApprovedBy = {FirstName: this.firstName, LastName: this.lastName};
+        }
+    }
+
+    expenseAmountChanged(args: ExpenseAmountChangedEvent) {
+        let expense = args.expense;
+        let newAmount = args.amount;
+
+        for (let exp of this.expenses) {
+            if (exp === expense)
+                exp.Amount = newAmount;
+        }
     }
 }
 

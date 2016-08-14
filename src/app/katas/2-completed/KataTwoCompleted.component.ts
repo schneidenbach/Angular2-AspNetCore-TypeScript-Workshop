@@ -3,11 +3,18 @@ import {Expense} from '../expenses/expense';
 import {Employee} from '../expenses/employee';
 
 @Component({
-    selector: 'expense-app',
+    templateUrl: 'KataTwoCompleted.component.html',
     moduleId: module.id,
-    templateUrl: 'app.component.html'
+    styles: [
+        `
+        .negative-amount {
+            color: red;
+        }
+        `
+    ]
 })
-export class AppComponent {
+export class KataTwoCompletedComponent {
+    userName: string;
     selectedExpense: Expense;
 
     expenses: Array<Expense> = [
@@ -70,4 +77,18 @@ export class AppComponent {
             ExpenseDate: new Date(2016, 4, 22)
         },
     ];
+    
+    getTotal() {
+        return this.expenses.reduce((prev, current) => prev + current.Amount, 0);
+    }
+    
+    getReimbursableTotal() {
+        return this.expenses.reduce((prev, current) => prev + current.AmountReimbursable, 0);
+    }
+    
+    getTotalReimbursablePercent() {
+        return (this.getReimbursableTotal()) / (this.getTotal() || 0);
+    }
 }
+
+

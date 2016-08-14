@@ -4,7 +4,6 @@ import {Employee} from '../expenses/employee';
 import {ExpenseAmountChangedEvent, ExpenseDetailComponent} from "./expense-detail.component";
 
 @Component({
-    selector: 'expense-app',
     templateUrl: 'KataThree.component.html',
     moduleId: module.id,
     styles: [
