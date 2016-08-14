@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
     template: `
@@ -22,7 +22,6 @@ import { Component } from "@angular/core";
             <li routerLinkActive="active" routerLink="/kata-five">
                 <a href="#">Kata 5</a>
             </li>
-
         </ul>
     </nav>
 
@@ -30,6 +29,4 @@ import { Component } from "@angular/core";
     `,
     selector: 'my-app'
 }) 
-export class AppComponent {
-    
-}
+export class AppComponent {}
