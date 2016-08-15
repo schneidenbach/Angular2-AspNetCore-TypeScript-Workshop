@@ -8,7 +8,7 @@ If you want to be able to follow along on your laptop as we use ASP.NET Core dur
 1. Install [Node](https://nodejs.org).  The version you should install will be labeled "Recommended For Most Users."
 2. Make sure Node is in your command prompt's PATH by opening a command prompt and typing "npm" without quotes, and hitting Enter.  You should see a list of commands pop up.  (If you get something like "'npm' is not recognized as an internal or external command, operable program or batch file," then you need to add Node to your PATH using [these instructions](http://stackoverflow.com/a/27864253).)
 3. Install [Visual Studio Code](https://code.visualstudio.com/Download).
-4. Install the [.NET Core SDK](https://www.microsoft.com/net/core).  **If you're on Windows, I recommend installing just the command line tools. We will not be using Visual Studio in this workshop.**
+4. Install the [.NET Core SDK](https://www.microsoft.com/net/core).  **If you're on Windows, I recommend installing just the command line tools. We will not be using Visual Studio in this workshop.**  If you have any previously installed version, make sure you uninstall them first.
 
 ### Run the project
 1. Download [this repo](https://github.com/schneidenbach/Angular2-AspNetCore-TypeScript-Workshop) as a ZIP file and unzip it to a directory of your choosing. (If you're a Git user, feel free to clone it instead.)
