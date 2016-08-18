@@ -13,16 +13,7 @@ For our purposes, a kata is simply a coding exercise.  It's a term that's kind o
 
 Good question!
 
-### Kata 1 - Hello World!
-**Objectives:**
-
-* Construct a basic Angular 2 component, including assigning a selector and template.
-* Use interpolation (`{{ }}` expressions) to display data in your component.
-* Start your Angular 2 application.
-
-This one will be a follow-along kata!  No specific instructions per se.
-
-### Kata 2 - Components and templating
+### Kata 1 - Components and templating
 
 **Objectives:**
 
@@ -49,7 +40,7 @@ You've been tasked with working on a SPA that deals with expense reporting and a
 * [\*ngIf directive](hints/ngif.md "*ngIf evaluates an expression and if the expression is truthy, the element is rendered: *ngIf="firstName".  Click for more info!")
 * [Event handlers](hints/events.md 'Events are bound to an element using the () syntax: (click)="doSomething()" Click for more info!')
 
-### Kata 3 - Altering display with pipes and styles
+### Kata 2 - Altering display with pipes and styles
 
 **Objectives:**
 
@@ -74,7 +65,7 @@ A junior programmer in your division started on an Angular 2 app to display expe
 * [Styles and CSS classes](hints/styles.md "Too much goodness to put into a tooltip.  Click for more info!")
 * [Two-way binding with ngModel](hints/ngmodel.md "ngModel expressions bind an input to a component property.  Remember to use the box of bananas syntax: [(ngModel)]="firstName" Click for an example!")
 
-### Kata 4 - Child components
+### Kata 3 - Child components
 
 **Objectives:**
 
@@ -107,7 +98,7 @@ Your boss is so impressed with your skills with the expense app, he's asked you 
 * [@Input properties in child components](hints/inputproperties.md "@Input properties allow you to pass data from your parent to your child component!  Click for more info.")
 * [Emitting events from child components using @Output](hints/outputproperties.md "@Output properties allow you to transmit events from the parent to the child!  Click for more info and an example!")
 
-### Kata 5 - Services
+### Kata 4 - Services
 **Objectives:**
 
 * Learn how to leverage services inside of your Angular 2 application.
@@ -128,7 +119,7 @@ You continue to impress by separating all of the concerns.  Your next task is to
 * [Adding a service to a component](hints/addservicetocomponent.md "Services are very easy to add to a component once created.  Click to learn more!")
 * [Lifecycle hooks](hints/lifecyclehooks.md "Lifecycle hooks allow you to run events related to your component's life cycle, including creation and destruction.  Click for more info!")
 
-### Kata 6 - RxJS, Observables and HTTP
+### Kata 5 - RxJS, Observables and HTTP
 
 **Objectives:**
 
