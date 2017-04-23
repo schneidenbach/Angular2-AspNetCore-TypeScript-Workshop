@@ -1,5 +1,6 @@
 # Getting Started with Angular 2, ASP.NET Core, and TypeScript
 
+## NOTE: these workshop materials are no longer maintained as I don't give this workshop anymore. I'll keep it here while it's still useful to someone!
 
 Hi! This repo is for all things related to the Angular 2, ASP.NET Core, and TypeScript workshop given by [Spencer Schneidenbach](http://schneids.net).
 
@@ -26,7 +27,7 @@ Break | 15 minutes | 3:30 PM
 
 ## License
 
-Everything here is licensed under the [MIT license](LICENSE).  However, if you are wanting to present this workshop at a conference, please contact me first to make sure I'm not submitting this workshop to the conference already!
+Everything here is licensed under the [MIT license](LICENSE).
 
 ## Contact
 
